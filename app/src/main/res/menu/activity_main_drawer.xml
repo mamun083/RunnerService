@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="গাড়ির মডেল " />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="সার্ভিস পয়েন্ট" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_accessible_black_24dp"
+            android:title="আমাদের সম্পর্কে " />
+
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="জরুরি যোগাযোগ " />
+    </group>
+
+    <item android:title="যোগাযোগ">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="সামাজিক শেয়ার " />
+
+            <item
+                android:id="@+id/registration"
+                android:icon="@drawable/ic_account_circle_black_24dp"
+                android:title="রেজিস্ট্রেশন | লগইন করুন " />
+        </menu>
+    </item>
+
+
+</menu>

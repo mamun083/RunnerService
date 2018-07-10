@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/header_bg"
+        android:paddingTop="64dp"
+        android:paddingLeft="@dimen/nav_header_vertical_spacing"
+        android:paddingRight="@dimen/nav_header_vertical_spacing"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/rscBtn"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:textSize="24sp"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:background="#cbe5fa"
+            android:text="রানার সার্ভিস সেন্টার "
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/ascBtn"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:background="#a8d7fb"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="অথোরাইস সার্ভিস সেন্টার" />
+
+        <Button
+            android:id="@+id/rsmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:background="#cbe5fa"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="রানার ষ্টার মেকানিক " />
+
+        <Button
+            android:id="@+id/spdealer"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:background="#a8d7fb"
+            android:text="স্পিয়ার পার্টস রিটেলর" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header_bg"
+    android:padding="@dimen/nav_header_vertical_spacing"
+    android:orientation="horizontal"
+    tools:context=".DetailspartsActivity" >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="2dp"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/captionOriginId"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#cbe5fa"
+            android:text="পার্টসের আইডি"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/prtsNameCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#cbe5fa"
+            android:text="পার্টসের নাম"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+        <TextView
+            android:id="@+id/prtsIdCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#a8d7fb"
+            android:text="পার্টসের ক্যাটাগরি "
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+        <TextView
+            android:id="@+id/partsMdlCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#cbe5fa"
+            android:text="মডেলের নাম "
+            android:textColor="#fff"
+            android:paddingVertical="10dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+        <TextView
+            android:id="@+id/prtsPriceCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#a8d7fb"
+            android:text="বিক্রয় মূল্য "
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+        <TextView
+            android:id="@+id/callNowCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#cbe5fa"
+            android:text="অর্ডার করুন"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/interestCap"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#a8d7fb"
+            android:text="আপনার পছন্দ"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/originId"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#cbe5fa"
+            android:text="Piston"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp"
+            tools:text="XC085C" />
+        <TextView
+            android:id="@+id/prtsName"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20sp"
+            android:background="#cbe5fa"
+            android:text="Piston"
+            android:textColor="#fff"
+            android:paddingVertical="5dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp"
+            tools:text="Piston" />
+        <TextView
+            android:id="@+id/item_cat_name"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20sp"
+            android:background="#a8d7fb"
+            android:text="01230"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp"
+            tools:text="01230" />
+
+        <TextView
+            android:id="@+id/item_model"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20sp"
+            android:background="#cbe5fa"
+            android:text="Pro 1050"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp"
+            tools:text="Pro 1050" />
+
+        <TextView
+            android:id="@+id/item_sale_price"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="22sp"
+            android:background="#a8d7fb"
+            android:text="1000"
+            android:textColor="#fff"
+            android:paddingVertical="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="2dp"
+            tools:text="1000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cbe5fa"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/callNow"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#cbe5fa"
+                android:paddingVertical="5dp"
+                app:srcCompat="@drawable/smcall" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#a8d7fb"
+            android:layout_marginBottom="2dp"
+            android:paddingLeft="20dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/interestButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/love"
+                android:text="y"
+                android:textColor="#f70005"
+                android:paddingVertical="5dp"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

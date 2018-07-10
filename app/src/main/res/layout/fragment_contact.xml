@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xheader_bg"
+        android:paddingTop="64dp"
+        android:paddingLeft="@dimen/nav_header_vertical_spacing"
+        android:paddingRight="@dimen/nav_header_vertical_spacing"
+        android:orientation="vertical"
+        tools:context=".ContactFragment">
+        <ImageView
+            android:id="@+id/contactImg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:background="@drawable/contact" />
+        <TextView
+            android:id="@+id/contactTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="যেকোনো ইমার্জেন্সিতে  যোগাযোগ করুন " />
+
+        <TextView
+            android:id="@+id/contactMultiText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:inputType="textMultiLine"
+            android:text="রানার মোটরস লিমিটেড সার্ভিস সেন্টার \n ঠিকানা : গাজীপুরা, গাজীপুর \n ফোন :01796554433"
+            android:textColor="@android:color/white" />
+        <ImageView
+            android:id="@+id/stikerImg"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:background="@drawable/stiker" />
+
+    </LinearLayout>
