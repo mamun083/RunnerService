@@ -107,8 +107,7 @@ public class PartsActivity extends AppCompatActivity {
                                     Log.i("morshed", "" + ModelDataParts.getItem_category_name());
                                     Log.i("morshed", "" + ModelDataParts.getModel_name());
                                     Log.i("morshed", "" + ModelDataParts.getItem_sale_price());
-//                                    Log.i("morshed", "" + ModelDataParts.getItem_sale_price());
-
+//
                                     recyclerModelData.add(ModelDataParts);
 
                                 }
