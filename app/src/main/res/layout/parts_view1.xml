@@ -6,6 +6,7 @@
     android:layout_gravity="start"
     android:layout_marginTop="8dp"
     android:layout_marginHorizontal="8dp"
+    android:background="#8aa68a"
     android:padding="8dp"
     android:orientation="vertical">
     <!--<com.android.volley.toolbox.NetworkImageView-->
@@ -47,19 +48,22 @@
     <TextView
         android:id="@+id/Partsid"
         android:layout_width="wrap_content"
-        android:layout_height="0px"
+        android:layout_height="wrap_content"
        />
     <TextView
         android:id="@+id/saleprice"
+        android:text="Hey"
         android:layout_width="wrap_content"
-        android:layout_height="0px" />
+        android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/model_name"
+        android:text="Hey"
         android:layout_width="wrap_content"
-        android:layout_height="0px" />
+        android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/category_name"
+        android:text="Hey"
         android:layout_width="wrap_content"
-        android:layout_height="0px" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
 

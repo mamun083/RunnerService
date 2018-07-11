@@ -15,6 +15,15 @@ public class ModelDataParts {
     public ModelDataParts() {
     }
 
+    public ModelDataParts(String modelparts_name, String item_id, String item_category_name, String model_name, String item_sale_price, String origin_id) {
+        this.modelparts_name = modelparts_name;
+        this.item_id = item_id;
+        this.item_category_name = item_category_name;
+        this.model_name = model_name;
+        this.item_sale_price = item_sale_price;
+        this.origin_id = origin_id;
+    }
+
     //===== GET Information Methode Creation
     public String getItem_id() {
         return item_id;

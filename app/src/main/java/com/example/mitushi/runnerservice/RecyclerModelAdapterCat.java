@@ -26,9 +26,12 @@ public class RecyclerModelAdapterCat extends RecyclerView.Adapter<RecyclerModelA
     ImageLoader imageLoader = AppControler.getInstance().getImageLoader();
     String mdlName;
 
-    public RecyclerModelAdapterCat(Context mContex, ArrayList mData) {
+    public RecyclerModelAdapterCat(Context mContex, ArrayList<ModelDataCat> mData) {
         this.mContex = mContex;
-        this.mData = mData;
+        this.mData=mData;
+        //... Some fields initialization here
+        notifyDataSetChanged();
+
     }
 
     @Override

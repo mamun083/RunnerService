@@ -31,7 +31,7 @@ import static com.example.mitushi.runnerservice.AppControler.TAG;
 
 public class PartsActivity extends AppCompatActivity {
 
-    private ArrayList<ModelDataParts> recyclerModelData= new ArrayList<>( ) ;
+    private ArrayList<ModelDataParts> recyclerModelData = new ArrayList<>();
     private RecyclerView recyclerModelPartsView;
     private RecyclerModelAdapterParts adapter;
     private ProgressDialog pDialog;
@@ -39,23 +39,23 @@ public class PartsActivity extends AppCompatActivity {
     // Log tag
     //private static final String TAG = PartsActivity.class.getSimpleName();
 
-    // Movies json url
+    //Movies json url
     private static final String base_url = "http://bdthemebazar.com/runnerapps/";
     private static final String url = "http://bdthemebazar.com/runnerapps/all_api/api_parts";
-    String parts_cat_name,parts_model_name;
+    String parts_cat_name, parts_model_name;
     //private static final String base_url = "http://192.168.56.1/runnerapps/";
     //private static final String url = "http://192.168.56.1/runnerapps/all_api/api_parts";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_parts);
+        setContentView(R.layout.activity_parts);
 
-        recyclerModelPartsView = (RecyclerView) findViewById( R.id.recycleModelparts);
-        adapter = new RecyclerModelAdapterParts(this, recyclerModelData );
+        recyclerModelPartsView = (RecyclerView) findViewById(R.id.recycleModelparts);
+        adapter = new RecyclerModelAdapterParts(this, recyclerModelData);
 
-        recyclerModelPartsView.setLayoutManager( new LinearLayoutManager( this ) );
-        recyclerModelPartsView.setAdapter( adapter );
+        recyclerModelPartsView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerModelPartsView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(this);
         // Showing progress dialog before making http request
@@ -66,6 +66,7 @@ public class PartsActivity extends AppCompatActivity {
         //String position= i.getExtras().getString("NAME_OF_POSITON");
 
         parts_cat_name = i.getExtras().getString("NAME_KEY");
+        Log.i("morshed", "Parts Cat name:-- " + parts_cat_name);
         parts_model_name = i.getExtras().getString("NAME_KEY_MODEL");
 
         JsonArrayRequest movieReq = new JsonArrayRequest(url,
@@ -74,35 +75,66 @@ public class PartsActivity extends AppCompatActivity {
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
                         hidePDialog();
+                        int count = 0;
 
                         // Parsing json
                         for (int i = 0; i < response.length(); i++) {
                             try {
-                                JSONObject obj = response.getJSONObject(i);
                                 ModelDataParts ModelDataParts = new ModelDataParts();
+                                JSONObject obj = response.getJSONObject(i);
 
-                                String item_cat_name = obj.getString("item_category_name");
+//                                String item_cat_name = obj.getString("item_category_name");
+
+                                // Log.i( "morshed","Item cat name:----"+item_cat_name);
+
 
                                 String model_name = obj.getString("model_name");
 
+//                                Log.i( "morshed","Model name 1: "+parts_model_name);
+//                                Log.i( "morshed","Model name 2: "+model_name);
+                                count++;
 
-//                                Log.i( "Parts",""+item_cat_name.toString() );
-                                Log.i( "Parts",""+model_name.toString() );
+                                if (model_name.equals(parts_model_name)) {
 
-                                if(item_cat_name.equals( parts_cat_name)&& model_name.equals(parts_model_name)){
-
-                                    //ModelDataParts.setItem_id(obj.getString("item_id"));
-                                    //ModelDataParts.setModelparts_photo(base_url+obj.getString("item_pic"));
+                                    Log.i("morshed", "Condition-------is equal");
                                     ModelDataParts.setOrigin_id(obj.getString("origin_id"));
                                     ModelDataParts.setModelparts_name(obj.getString("item_name"));
                                     ModelDataParts.setItem_category_name(obj.getString("item_category_name"));
                                     ModelDataParts.setModel_name(obj.getString("model_name"));
                                     ModelDataParts.setItem_sale_price(obj.getString("item_sale_price"));
+                                    Log.i("morshed", "" + ModelDataParts.getOrigin_id());
+                                    Log.i("morshed", "" + ModelDataParts.getModelparts_name());
+                                    Log.i("morshed", "" + ModelDataParts.getItem_category_name());
+                                    Log.i("morshed", "" + ModelDataParts.getModel_name());
+                                    Log.i("morshed", "" + ModelDataParts.getItem_sale_price());
+
+                                    recyclerModelData.add(ModelDataParts);
+
                                 }
+
+                                //item_cat_name.equals(parts_cat_name)&&
+                               /* if(model_name.equals(parts_model_name)){
+
+                                    //ModelDataParts.setItem_id(obj.getString("item_id"));
+                                    //ModelDataParts.setModelparts_photo(base_url+obj.getString("item_pic"));
+                                    ModelDataParts.setOrigin_id(obj.getString("origin_id"));
+//                                    Log.i("morshed","Origin id: "+obj.getString("origin_id"));
+                                    ModelDataParts.setModelparts_name(obj.getString("item_name"));
+//                                    Log.i("morshed","Origin id: "+obj.getString("item_name"));
+
+                                    ModelDataParts.setItem_category_name(obj.getString("item_category_name"));
+//                                    Log.i("morshed","category name: "+obj.getString("item_category_name"));
+
+                                    ModelDataParts.setModel_name(obj.getString("model_name"));
+//                                    Log.i("morshed","Model name: "+obj.getString("model_name"));
+
+                                    ModelDataParts.setItem_sale_price(obj.getString("item_sale_price"));
+//                                    Log.i("morshed","sale price: "+obj.getString("item_sale_price"));
+
+                                }*/
 
 
                                 // adding movie to movies array
-                                recyclerModelData.add(ModelDataParts);
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -110,9 +142,11 @@ public class PartsActivity extends AppCompatActivity {
 
                         }
 
+                        Log.i("morshed", "" + count);
+
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated data
-                           adapter.notifyDataSetChanged();
+                        adapter.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
             @Override

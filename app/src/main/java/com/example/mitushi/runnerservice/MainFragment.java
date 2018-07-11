@@ -80,7 +80,9 @@ public class MainFragment extends Fragment {
                                 JSONObject obj = response.getJSONObject(i);
                                     ModelData modelData = new ModelData();
                                     modelData.setModel_name(obj.getString("model_name"));
-                                    modelData.setModel_photo(base_url+obj.getString("model_pic"));
+//                                Log.i("morshed","model name: "+obj.getString("model_name"));
+
+                                modelData.setModel_photo(base_url+obj.getString("model_pic"));
 
                                 // adding movie to movies array
                                 recyclerModelData.add(modelData);

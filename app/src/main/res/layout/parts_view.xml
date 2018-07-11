@@ -10,12 +10,12 @@
     android:background="#fff"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/xorigin_id"
+        android:id="@+id/model_name"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:paddingHorizontal="10dp"
         android:paddingTop="8dp"
-        android:text="M1050XD"
+        android:text="Hello"
         android:textSize="20dp"
         android:textStyle="bold"
         android:background="#cbe5fa"
@@ -23,27 +23,6 @@
         android:textColor="#fff"
         android:paddingVertical="5dp"
         tools:text="parts origin id" />
-    <!--<com.android.volley.toolbox.NetworkImageView-->
-        <!--android:id="@+id/thumbnailParts"-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:scaleType="fitXY"-->
-        <!--android:src="@drawable/pro1055" />-->
-    <TextView
-        android:id="@+id/captionParts"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:contentDescription="M10050"
-        android:paddingHorizontal="10dp"
-        android:paddingTop="8dp"
-        android:text="M10050"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:background="#fb081f"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:paddingVertical="5dp"
-        android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
-        tools:text="PRO1055" />
+
 </LinearLayout>
 
